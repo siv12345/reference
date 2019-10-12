@@ -1,2 +1,7 @@
 # reference
-This is a test to see if the github changes are visible in the ide
+Web Technologies Project 
+
+Our project aims to build a seamless website where people can view documentation for multiple languages.
+
+#Feature List 
+[] 
