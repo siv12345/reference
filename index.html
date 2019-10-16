@@ -11,8 +11,8 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="web.css">
-    <script src="dev.js"></script>
+    <link rel="stylesheet" href="test.css">
+    <script src="dark.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <style>
     @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
@@ -34,7 +34,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     
     <div class="wrapper">
-
     <!-- Sidebar -->
     <nav id="sidebar">
         <div class="sidebar-header">
@@ -47,7 +46,7 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="" id="page1" >Home 1</a>
+                        <a href="./otherpages/page1.html" id="page1" >Home 1</a>
                     </li>
                     <li>
                         <a href="#">Home 2</a>
@@ -57,9 +56,24 @@
                     </li>
                 </ul>
             </li>
+
+            <li>
+                <a href="#javaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Java Script</a>
+                <ul class="collapse list-unstyled" id="javaSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
             
             <li>
-                <a href="#JavascriptSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Javascript</a>
+                <a href="#JavascriptSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Java</a>
                 <ul class="collapse list-unstyled" id="javascriptSubmenu">
                     <li>
                         <a href="#">Page 1</a>
@@ -87,35 +101,21 @@
                 </ul>
             </li>
             <li>
-                <a href="#javaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Java</a>
-                <ul class="collapse list-unstyled" id="javaSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
+                    <div class="toggle-container">
+                        <input type="checkbox" id="switch" name="theme" />Test<label for="switch">Toggle</label>
+                    </div>
+                    <script src="./test.js"></script>
             </li>
-            
         </ul>
     </nav>
             <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                         <span>Menu</span>
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
@@ -135,23 +135,23 @@
                 </div>
             </nav>
 
-            <h2 class = "sub-head">Text</h2>
+            <h2 class = "sub-head">Introduction</h2>
             <p class="sub-head-info">Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
             <p class="sub-head-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <div class="line"></div>
 
-            <h2 class="sub-head">Lorem Ipsum Dolor</h2>
+            <h2 class="sub-head">Syntax</h2>
             <p class="sub-head-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <div class="line"></div>
 
-            <h2 class="sub-head">Lorem Ipsum Dolor</h2>
+            <h2 class="sub-head">Usage</h2>
             <p class="sub-head-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
             <div class="line"></div>
 
-            <h3 class="sub-head">Lorem Ipsum Dolor</h3>
+            <h3 class="sub-head">Reference Links</h3>
             <p class="sub-head-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
              <div class="upvote"></div>
                 <h3 class="sub-head">Rate The Language</h3>
