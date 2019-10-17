@@ -41,7 +41,7 @@ html {
   }
   
   .wrapper {
-    background-color: var(--bg-panel);
+    background-color: var(--bg);
     display: grid;
     grid-template-columns: 80% auto;
     grid-template-rows: auto auto;
@@ -59,10 +59,14 @@ html {
     margin-top: 2em;
   }
   
-  .wrapper code{
-    background-color: #B5B5B5;
+  .wrapper pre{
     color: var(--color-text);
+    grid-area: content;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    margin-top: 2em;
   }
+
   
   input[type=checkbox] {
     height: 0;
@@ -153,9 +157,17 @@ a:focus {
 
 .line {
     width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
+    height: 2px;
+    border-bottom: 1px var(--color-text);
     margin: 40px 0;
+}
+
+.sub-head{
+  color: var(--color-text);
+  background: var(--bg-panel);
+  border-radius: 5px;
+  padding: 7px;
+  padding-left: 1em;
 }
 
 /* ---------------------------------------------------
@@ -171,9 +183,9 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
-    color: #fff;
-    transition: all 0.3s;
+    background: var(--bg-panel);
+    color: var(--color-text);
+    transition: all 0.1s;
 }
 
 #sidebar.active {
@@ -265,9 +277,7 @@ a.article:hover {
 }
 .sub-head-info{
     font:"Montserrat";
-}
-.sub-head{
-    background: rgba(86, 96, 216, 0.81);
+    padding-left: 1em;
 }
 .upvote {
     margin-top: 20px;
