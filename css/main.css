@@ -21,6 +21,10 @@ html {
   body {
     background-color: var(--bg);
   }
+
+  .navbar{
+    background-color: var(--bg-panel);
+  }
   
   .regular p{
     color: var(--color-text);
