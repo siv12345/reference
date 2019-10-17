@@ -8,14 +8,36 @@
 ::-moz-selection {
   background: #2D2F36;
 }
+html {
+  height: 100%;
+  font-family: 'Montserrat';
+  align-items: center;
+  justify-items: center; 
+  --bg: #000000;
+  --bg-alt: rgb(72, 78, 85);
+  --bg-panel: #1B1C1E;
+  --color-headings: #3694FF;
+  --color-text: #B5B5B5;
+  --grad: #000000;
+}
+
+html[data-theme='light'] {
+  --bg: #FCFCFC;
+  --bg-panel: #EBEBEB;
+  --color-headings: #0077FF;
+  --color-text: #333333;
+  --grad: #ffffff;
+}
+
 body {
-  background: white;
+  background-color: var(--bg);
   font-family: 'Inter UI', sans-serif;
   margin: 0;
   padding: 20px;
 }
+
 .page {
-  background: #e2e2e5;
+  background: var(--grad);
   display: flex;
   flex-direction: column;
   height: calc(100% - 40px);
@@ -44,7 +66,8 @@ body {
   }
 }
 .left {
-  background: white;
+  background: var(--bg-panel);
+  color: var(--color-headings);
   height: calc(100% - 40px);
   top: 20px;
   position: relative;
@@ -63,16 +86,20 @@ body {
   font-weight: 900;
   margin: 50px 40px 40px;
 }
+.darkTheme{
+  margin: 40px;
+  position: relative;
+}
 .eula {
-  color: #999;
+  color: var(--color-text);
   font-size: 14px;
   line-height: 1.5;
   margin: 40px;
 }
 .right {
-  background: #474A59;
+  background: var(--bg-panel);
   box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
-  color: #F1F1F2;
+  color: var(--color-text);
   position: relative;
   width: 50%;
 }
@@ -99,7 +126,7 @@ path {
   position: absolute;
 }
 label {
-  color:  #c2c2c5;
+  color: var(--color-text);
   display: block;
   font-size: 14px;
   height: 16px;
@@ -120,8 +147,8 @@ input::-moz-focus-inner {
   border: 0; 
 }
 #submit {
-  color: #707075;
-  margin-top: 40px;
+  color: var(--color-text);
+  margin-top: 19px;
   transition: color 300ms;
 }
 #submit:focus {
@@ -129,4 +156,54 @@ input::-moz-focus-inner {
 }
 #submit:active {
   color: #d0d0d2;
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }

@@ -4,11 +4,9 @@ checkbox.addEventListener('change', function() {
     if(this.checked) {
         trans()
         document.documentElement.setAttribute('data-theme', 'light')
-        document.cookie = "data-theme=light"
     } else {
         trans()
         document.documentElement.setAttribute('data-theme', 'dark')
-        document.cookie = "data-theme=dark"
     }
 })
 
