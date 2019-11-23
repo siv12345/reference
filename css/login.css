@@ -131,7 +131,7 @@ label {
   font-size: 14px;
   height: 16px;
   margin-top: 20px;
-  margin-bottom: 5px;
+
 }
 input {
   background: transparent;
@@ -172,7 +172,7 @@ label {
   background: grey;
   float: right;
   border-radius: 100px;
-  position: relative;
+  position: fixed;
 }
 
 label:after {
